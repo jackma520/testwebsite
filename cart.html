@@ -50,6 +50,16 @@
     (window,document,"script","//bat.bing.com/bat.js","uetq");
     </script>
 
+    <script>
+        function GetCheckoutEvent(){
+        window.uetq = window.uetq || [];  
+        window.uetq.push ('event', 'checkout_click', 
+                            {'event_category': 'transaction', 
+                             'event_label': 'event1', 
+                             'event_value': '1'});  
+        }
+    </script>
+
 </head>
 
 <body>
@@ -361,7 +371,7 @@
                                         <h2>Grand Total <span>$1250.00</span></h2>
                                     </div>
                                     <div class="cart-summary-button">
-                                        <button class="checkout-btn">Checkout
+                                        <button class="checkout-btn" onclick="GetCheckoutEvent()">Checkout
 
                                             <!--Xudong's tags for event (bing ads)-->
                                             <script>
